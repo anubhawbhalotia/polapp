@@ -66,20 +66,6 @@ class QuestionDetailViewTests(TestCase):
         response = self.client.get(url)
         self.assertContains(response, question_with_choices.question_text)
 
-    # def test_both_question_with_choice_and_question_with_no_choice(self):
-    #     """
-    #     The detail view should not display question with no choice and display question with choice
-    #     :return:
-    #     """
-    #     generic_choices = ['Choice 1', 'Choice 2']
-    #     question_with_no_choices = create_question(question_text="Question with no choices 1", days=0)
-    #     question_with_choices = create_question(question_text="Question with choices 2", days=0,
-    #                                             choices=generic_choices))
-    #     url1 = reverse('polls:detail', args=(question_with_no_choices))
-    #     response = self.client.get(url1)
-    #     self.assertEqual(response.status_code, 404)
-
-
 class QuestionIndexViewTests(TestCase):
     def test_no_questions(self):
         """
